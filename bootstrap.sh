@@ -16,3 +16,10 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 
 # creates the basic directory
 mkdir -p /home/vagrant/www
+
+#install latest version of ruby and set as the default.
+rvm install ruby 2.3.0
+rvm --default use ruby 2.3.0
+
+#install bundler.
+gem install bundler
