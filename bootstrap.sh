@@ -2,6 +2,8 @@
 sudo apt-get remove ruby
 
 # install essential apps
+sudo apt-get update -y -q
+sudo apt-get upgrade -y -q
 sudo apt-get install -y -q \
   build-essential \
   git \

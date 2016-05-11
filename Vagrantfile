@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :path => "bootstrap.sh", privileged: false
 
   #homefolder
-  config.vm.synced_folder "/Users/gregory.barnett", "/home/vagrant/gregory.barnett"
+  config.vm.synced_folder ENV['HOME'], "/home/vagrant/#{ENV['USER']}"
   config.vm.provider :virtualbox do |vb|
   # Use VBoxManage to customize the VM. For example to change memory:
   vb.customize ["modifyvm", :id, "--memory", "2048", "--cpus", "2"]
